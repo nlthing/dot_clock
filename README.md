@@ -5,4 +5,4 @@ A flutter clock.
 
 ## Screenshot
 
-<img src='screenshot.png' width='350'>
+<img src='screenshot.jpg' width='350'>
