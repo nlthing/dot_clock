@@ -4,6 +4,7 @@
 
 import 'dart:io';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_clock_helper/customizer.dart';
 import 'package:flutter_clock_helper/model.dart';
 import 'package:flutter/foundation.dart';
@@ -19,6 +20,11 @@ void main() {
     // https://github.com/flutter/flutter/issues/31366
     // See https://github.com/flutter/flutter/wiki/Desktop-shells#target-platform-override.
     debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  }
+
+  if (Platform.isAndroid) {
+    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
 
   // This creates a clock that enables you to customize it.
